@@ -194,6 +194,10 @@ Historically, responsiveness required writing JavaScript or massive blocks of CS
 - Container Queries ('@container'): instead of styling an element based on the screen size, container queries allow you to style a component based on the exact width of its immediate parent element. This makes components truly modular; a card layout can automatically switch from a grid to a list view depending entirely on the size of the sidebar or column it is placed into.
 - 'clamp()', 'min()', and 'max()': These mathematical functions let you create fluid typography and layouts without media queries. For example, 'font-size: clamp(1rem, 2.5vw, 3rem);' dynamically scales text based on screen size, but locks it strictly between a minimum of '1rem' and a maximum of '3rem'.
 
+---
+
+... continued prompting with "how to avoid overusing will-change"
+
 
 
 
