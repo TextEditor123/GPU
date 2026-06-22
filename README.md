@@ -198,7 +198,7 @@ Historically, responsiveness required writing JavaScript or massive blocks of CS
 
 ... continued prompting with "how to avoid overusing will-change"
 
-
+> taking a break then will come back and do more reading
 
 
 
