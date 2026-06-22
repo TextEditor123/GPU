@@ -158,5 +158,13 @@ This is where the browser passes the workload to the computer's graphics hardwar
 - Rasterization: the browser's compositing engine takes the display lists and converts the vector draw commands into bitmaps (grids of pixels). This is heavily handled by the GPU using low-level graphics APIs.
 - Layer Stitching: the GPU takes all the individual rasterized layers, calculates their final overlap, handles scrolling or opacity changes, and draws the final combined image directly to the monitor's screen buffer.
 
+Where JavaScript and Frameworks Fit:
+when you use a framework like React, Vue, or native JavaScript, the browser adds a loop to this pipeline:
+- The JavaScript modifies the DOM programmatically
+- The browser detects the change and recalculates the affected branch.
+- The engine triggers a Layout shift, re-paints the changed area, and re-composites the layers.
 
+---
+
+... continued prompting with "Can you tell me more about "modern CSS properties""
 
