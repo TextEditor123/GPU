@@ -123,5 +123,5 @@ Windows is famous for backward compatibility, meaning its UI is a hybrid of diff
 
 ... continued prompting with "how is HTML converted to UI"
 
-> I'm saying this: the goal was to get to this step, I need to take a second.  What I'm thinking about is "foolish and prideful". I want to understand it better.
+> I'm saying this: the goal was to get to this step, I need to take a second.  What I'm thinking about is "foolish and prideful". I want to understand it better. "shame" also comes to mind.
 
