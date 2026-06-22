@@ -87,6 +87,10 @@ Unlike CPUs (which use stable ISAs like x86 or ARM for decades) GPU ISAs change 
 - AMD "Southern Islands" / "RDNA" ISA: AMD publishes their native ISA manuals openly. Developers can write raw AMD assembly code (GCN/RDNA assembly) to hand-optimize instructions for specific vector registers.
 - NVIDIA "SASS" (Streaming Assembler): The actual binary machine code executed by NVIDIA hardware (e.g., Maxwell, Ampere, Blackwell). NVIDIA keeps the exact specifications proprietary, but developers can use tools like nvdisasm to disassemble compiled PTX code into SASS to see exactly how the hardware will execute it.
 
+---
+
+... continued prompting with "How does the Windows operating system display its UI"
+
 
 
 
