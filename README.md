@@ -119,6 +119,9 @@ Windows is famous for backward compatibility, meaning its UI is a hybrid of diff
 - Modern Windows 11 Core UI: Systems like the Taskbar, Start Menu, and Settings app use native WinUI 3 (accelerated under Project K2 / Windows K2 initiatives to maximize performance and responsiveness).
 - Legacy Control Panels: Older menus (like Device Manager or properties menus dating back to Windows 95/3.1) still use GDI (Graphics Device Interface), a CPU-bound @D rendering system, DWM seamlessly intercepts these legacy GDI draw commands, captures the output, and presents them inside a modern hardware-accelerated DWM wrapper so they look cohesive alongside newer apps.
 
+---
+
+... continued prompting with "how is HTML converted to UI"
 
 
 
