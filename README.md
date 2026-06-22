@@ -125,3 +125,8 @@ Windows is famous for backward compatibility, meaning its UI is a hybrid of diff
 
 > I'm saying this: the goal was to get to this step, I need to take a second.  What I'm thinking about is "foolish and prideful". I want to understand it better. "shame" also comes to mind.
 
+The conversion of an HTML file into a functional, interactive UI is handled by a browser's rendering engine (such as Blink in Chrome/Edge, WebKit in Safari, or Gecko in Firefox).
+
+This process is known as the Critical Rendering Path. It transforms a text file into pixels on your screen using a highly optimized pipeline.
+
+
