@@ -29,6 +29,6 @@ Alternatives:
 Modern Workarounds:
 - fast cache and pipelining to load data and instructions before they are actively needed.
 
+---
 
-
-
+... continued prompting with "where does the GPU come into play?"
