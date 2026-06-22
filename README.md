@@ -1,3 +1,11 @@
+I'm manually typing out a somewhat paraphrase somewhat word for word of google AI overview
+it is useful to just type out something to get a feel for the vocabulary
+without feeling overly stressed about the details.
+You're goal is to just represent the information well and try to mentally group things
+together in a way that makes sense to you, and you're typing the vocabulary so it starts sticking in your mind.
+
+---
+
 I'm looking up "von neumann architecture" and reading through the google ai overview
 
 Von Neumann architecture
@@ -52,8 +60,18 @@ Primary Use Cases:
 - Artificial Intelligence: Executing the massive matrix multiplications required to train and run deep learning models.
 - Scientific Simulations: processing complex mathematical models, such as weather forecasting or molecular dynamics, where calculations can be split into thousands of independent parts.
 
+---
 
+... continued prompting with "What is the lowest level way of interacting with the GPU"
 
+The lowest-level way of interacting with a GPU is through Driver-Level APIs and writing Machine Code (Assembly) that executes directly on the GPU's execution units.
+
+Because GPUs are treated as hardware peripherals, developers cannot write directly to the hardware registers without operating system permissions. Instead, they use a structured stack to get as close to the silicon as possible.
+
+Driver-Level APIs (The Entry Point):
+To bypass the overhead of heavy software frameworks, developers use low-overhead, "close-to-the-metal" Application Programming Interfaces (APIs). These APIs give direct control over memory allocation, thread scheduling, and hardware synchronization.
+- Vulkan (Cross-Platform): The lowest-level open-standard API for graphics and compute. It removes the driver abstractions found in older APIs like OpenGL, forcing the developer to manually manage memory layout and command queues.
+- DirectX 12 Agility / Direct3D 12 (Windows): Microsoft's low-level API that grants console-like, explicit control over the GPU.
 
 
 
