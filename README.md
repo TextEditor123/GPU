@@ -129,4 +129,34 @@ The conversion of an HTML file into a functional, interactive UI is handled by a
 
 This process is known as the Critical Rendering Path. It transforms a text file into pixels on your screen using a highly optimized pipeline.
 
+1. The Parsing Phase (Building the Models)
+
+The engine first reads the raw bytes of the HTML file and converts them into structured data models that the computer can understand.
+- The DOM (Document Object Model): The engine reads HTML tokens sequentially and structures them into a parent-child tree. For example, a body tag containing a div and p becomes a branching node tree.
+- The CSSOM (CSS Object Model): While parsing the HTML, the engine encounters link tags or style blocks. It pauses to download and parse the CSS, building a separate tree that maps styles (colors, spacing, fonts) to specific targets.
+
+Raw Bytes -> Tokens -> Nodes -> DOM / CSSOM Trees
+
+The Attachment and Render Tree Phase
+
+Next, the browser combines the DOM (the structure) and the CSSOM (the styling) into a third tree called the Render Tree (or Frame Tree).
+- Filtering Invisible Elements: the Render Tree only includes nodes that are physically visible on the screen. Any elements styled with display: none are stripped out entirely. Elements with visibility: hidden are kept, as they still occupy physical space.
+
+Layout (or Reflow)
+Once the browser knows which elements to show and what their styles are, it must calculate their exact geometry. This is the Layout phase.
+- Geometric Calculations: starting at the root of the tree, the engine computes the exact coordinates, width, and height of every element relative to the device's viewport.
+- The Box Model: it resolves relative values (like width:50% or margin:auto) into absolute hardware pixels.
+
+Painting (Recording the Draw Commands)
+With coordinates locked in, the browser converts the Render Tree into visual draw commands.
+
+- Layer Creation: to optimize performance, the browser splits the webpage into multiple distinct visual layers (similar to layers in Photoshop). Elements utilizing 3D transforms (translate3d), CSS animations, or video tags are automatically isolated on their own independent laywers.
+- Diuplay Lists: The engine creates a record of drawing instructions (e.g., "Draw a blue ectangle here," "Write text 'Hello' with font size 16 there") known as a display list.
+
+Compositing (Execution on the GPU)
+This is where the browser passes the workload to the computer's graphics hardware, working similarly to the Windows DWM architecture mentioned earlier.
+- Rasterization: the browser's compositing engine takes the display lists and converts the vector draw commands into bitmaps (grids of pixels). This is heavily handled by the GPU using low-level graphics APIs.
+- Layer Stitching: the GPU takes all the individual rasterized layers, calculates their final overlap, handles scrolling or opacity changes, and draws the final combined image directly to the monitor's screen buffer.
+
+
 
